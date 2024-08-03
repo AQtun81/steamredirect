@@ -1,0 +1,13 @@
+<body style="background: #000; color: #fff;">
+<script>
+  var url = "steam://" + window.location.search.substr(1);
+  if (url.length > 8) {
+    window.location.replace(url);
+    var redirectingHeader = document.createElement("redirecting");
+    redirectingHeader.innerText = `Redirecting to: ${url}`;
+    document.body.appendChild(redirectingHeader);
+    window.stop();
+  }
+</script>
+
+<p>missing redirect param!</br>example url: https://aqtun81.github.io/steamredirect?store/70</p>
